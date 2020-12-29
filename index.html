@@ -10,6 +10,8 @@
       integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="static/styles/style.css" />
     <script src="static/scripts/script.js" defer></script>
   </head>
@@ -17,7 +19,7 @@
     <div class="backdrop"></div>
     <nav>
       <div class="logo">
-        <a href="#">
+        <a href="index.html">
           <img src="static/img/logo.png" alt="logo" />
         </a>
       </div>
@@ -26,7 +28,7 @@
       </div>
       <ul>
         <li class="home">
-          <a href="#" class="active">Home</a>
+          <a href="index.html" class="active">Home</a>
         </li>
         <li class="projects">
           <a href="#">Projects</a>
@@ -36,6 +38,9 @@
         </li>
         <li class="contact">
           <a href="#">Contact</a>
+        </li>
+        <li class="contact">
+          <a href="about_us.html">About us</a>
         </li>
         <li class="search">
           <div class="search-icon" id="search-icon">
@@ -54,7 +59,7 @@
     <main>
       <section>
         <a href="" class="main-title">Last Posts</a>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-image">
             <a href="#">
               <img src="static/img/blog1.jpg" alt="" />
@@ -73,7 +78,7 @@
             <a href="#" class="btn btn-read-more">Read more</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-image">
             <a href="#">
               <img src="static/img/blog2.jpg" alt="" />
@@ -97,7 +102,7 @@
           </div>
         </div>
         <a href="" class="main-title">Last Projects</a>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-image">
             <a href="#">
               <img src="static/img/project1.jpg" alt="" />
@@ -116,7 +121,7 @@
             <a href="#" class="btn btn-read-more">Read more</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-image">
             <a href="#">
               <img src="static/img/project2.jpg" alt="" />
@@ -135,7 +140,7 @@
             <a href="#" class="btn btn-read-more">Read more</a>
           </div>
         </div>
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <div class="card-image">
             <a href="#">
               <img src="static/img/project3.jpg" alt="" />
@@ -200,6 +205,9 @@
           <li>
             <a href="#">Contact</a>
           </li>
+          <li>
+            <a href="#">About us</a>
+          </li>
         </ul>
       </div>
       <div class="right-footer">
@@ -229,5 +237,8 @@
         <p>Website created by <span>Adam Szustak</span></p>
       </div>
     </footer>
+    <script>
+      AOS.init();
+    </script> 
   </body>
 </html>
