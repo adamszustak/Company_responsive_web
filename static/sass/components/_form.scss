@@ -1,0 +1,82 @@
+.c-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  padding-top: 1.3rem;
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 1.7rem;
+    padding-bottom: 0.7rem;
+    width: 100%;
+
+    @include sm {
+      font-size: 1.2rem;
+    }
+
+    @include xs {
+      font-size:1rem;
+    }
+  }
+
+  &__field {
+    position: relative;
+  }
+
+  &__label {
+    left: 10px;
+    position: absolute;
+    top: -10px;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  &__input:not(:placeholder-shown) ~ &__label {
+    background: $primary-color;
+    transform: translate(0, -50%);
+    opacity: 1;
+  }
+
+  &__btn {
+    background-color: $primary-color;
+    margin: 10px 20px 10px 0px;
+    display: inline-block;
+  }
+
+  &__paragraph {
+    display: inline-block;
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__submit {
+    display: flex;
+
+    @include sm {
+      flex-direction: column;
+    }
+  }
+
+  &__sub-btn {
+    border-radius: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(23, 23, 23, 0.9);
+    color: $primary-color;
+    transition: 0.3s;
+    margin-right: 20px;
+    flex-grow: 2;
+
+    &:hover {
+      background-color: #000;
+    }
+  }
+
+  &__paragraph {
+    flex-grow: 1;
+  }
+}

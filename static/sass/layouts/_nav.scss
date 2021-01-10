@@ -1,0 +1,26 @@
+.o-nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  height: $nav-height;
+  left: 0;
+  background: rgba(23, 23, 23, 0.9);
+  align-self: stretch;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  z-index: 5;
+
+  &__logo {
+    height: 100%;
+    padding: .3rem 0;
+
+    &-link {
+      height:100%;
+    }
+
+    &-img {
+      height:100%;
+    }
+  }
+}

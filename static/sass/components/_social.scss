@@ -1,0 +1,27 @@
+.c-social {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 3em;
+    padding: 10px 20px;
+
+    &:hover .fa-youtube {
+      color: red;
+    }
+    &:hover .fa-facebook {
+      color: #3b5998;
+    }
+    &:hover .fa-github {
+      color: #bbb;
+    }
+    &:hover .fa-twitter {
+      color: #1da1f2;
+    }
+
+    @include sm {
+      padding: 10px 10px;
+    }
+  }
+}

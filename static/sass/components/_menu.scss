@@ -1,0 +1,99 @@
+.c-menu {
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  color: $primary-color;
+
+  @include md {
+    position: fixed;
+    top: $nav-height;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    transition: 0.3s ease-out;
+    z-index: -1;
+    transform: translateY(calc(-100% - #{$nav-height}));
+
+    &.is-active {
+      transform: translateY(0%);
+    }
+  }
+
+  &__link {
+    padding: 0 $nav-item-padding;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+
+    @include md {
+      padding-top: 1em;
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0%;
+      height: 0.125rem;
+      background-color: $primary-color;
+      bottom: -0.5rem;
+      left: $nav-item-padding;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: calc(100% - #{$nav-item-padding});
+    }
+
+    &--active {
+      color: $nav-bgc-color;
+    }
+  }
+  &__search-icon {
+    padding: 0 $nav-item-padding;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $nav-bgc-color;
+    }
+
+    @include md {
+      display: none;
+    }
+  }
+  &__search-box {
+    position: fixed;
+    top: $nav-height;
+    transition: 0.3s;
+    right: 0;
+    transform: translate(100%, -50%);
+
+    @include md {
+      position: initial;
+      width: 100%;
+      padding-top: 1em;
+      transform: translate(0);
+    }
+
+    &.active {
+      transform: translate(0, -50%);
+    }
+  }
+  &__search-input {
+    font-size: 1em;
+    height: 2em;
+    padding: 0 1em;
+    border: none;
+    box-shadow: inset 0px 0px 18px 0px rgba(0, 0, 0, 0.4);
+
+    @include md {
+      &::placeholder {
+        text-align: center;
+      }
+    }
+  }
+}

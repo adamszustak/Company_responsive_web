@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  width: 95%;
+  flex-grow: 1;
+
+  @include sm {
+    width: 99%;
+    flex-direction: column;
+  }
+}

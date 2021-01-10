@@ -1,0 +1,15 @@
+.a-btn {
+  font-size: 1.2rem;
+  font-weight: $bold-font;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 6px;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+}

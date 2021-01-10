@@ -1,0 +1,47 @@
+.o-team {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+
+  &__heading-big {
+    position: relative;
+    align-self: stretch;
+    margin: 2rem 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      margin-top: 5px;
+      top: 100%;
+      left: 0;
+      width: 0px;
+      height: 4px;
+      background: linear-gradient(135deg, #03a9f4, rgba(95, 158, 160, 0.5));
+      animation: highlighted_min 0.8s ease-in forwards;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      margin-top: 10px;
+      top: 110%;
+      left: 0;
+      width: 0px;
+      height: 4px;
+      background: linear-gradient(135deg, #03a9f4, rgba(95, 158, 160, 0.5));
+      animation: highlighted_max 0.8s 0.3s ease-in forwards;
+    }
+    @keyframes highlighted_min {
+      100% {
+        width: 150px;
+      }
+    }
+
+    @keyframes highlighted_max {
+      100% {
+        width: 250px;
+      }
+    }
+  }
+}

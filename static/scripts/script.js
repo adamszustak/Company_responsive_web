@@ -1,11 +1,11 @@
 'use strict';
 // LOADER
-document.body.setAttribute('class', 'noscroll');
-const loader = document.querySelector('.loader');
+document.body.setAttribute('class', 'u-noscroll');
+const loader = document.querySelector('.c-loader');
 window.onload = function () {
   setTimeout(() => {
     loader.style.opacity = '0';
-    document.body.className = document.body.className.replace('noscroll', '');
+    document.body.className = document.body.className.replace('u-noscroll', '');
     setTimeout(() => {
       loader.style.display = 'none';
     }, 200);
@@ -13,12 +13,11 @@ window.onload = function () {
 };
 
 //SEARCHBOX $ MENU
-const searchIcon = document.getElementById('search-icon');
-const searchBox = searchIcon.nextElementSibling;
-const menuIcon = document.querySelector('.hamburger');
-const backdrop = document.querySelector('.backdrop');
-const aside = document.querySelector('aside');
-const mobileNav = document.querySelector('nav ul');
+const searchIcon = document.querySelector('.js-search-icon');
+const searchBox = document.querySelector('.js-search-box');
+const menuIcon = document.querySelector('.c-hamburger');
+const backdrop = document.querySelector('.c-backdrop');
+const mobileNav = document.querySelector('.js-menu');
 
 searchIcon.addEventListener('click', () => {
   searchBox.classList.toggle('active');
@@ -26,35 +25,35 @@ searchIcon.addEventListener('click', () => {
 
 window.addEventListener('scroll', () => {
   searchBox.classList.remove('active');
-  mobileNav.classList.remove('active');
+  mobileNav.classList.remove('is-active');
   menuIcon.classList.remove('is-active');
 });
 
 menuIcon.addEventListener('click', () => {
-  mobileNav.classList.toggle('active');
+  mobileNav.classList.toggle('is-active');
   menuIcon.classList.toggle('is-active');
 });
 
-//CONTACT POP_UP
-const contactModal = document.getElementById('contact-modal');
-const ctcBtn = document.querySelector('li.contact');
-const closeBtn = contactModal.querySelector('.close');
+// CONTACT POP_UP
+const contactModal = document.querySelector('.js-ctc-modal');
+const ctcBtn = document.querySelector('.js-ctc-btn');
+const closeBtn = contactModal.querySelector('.js-close-modal');
 const mediaQuery = window.matchMedia('(min-width: 1024px)');
 
 const toggleContactModal = () => {
-  contactModal.classList.toggle('visible');
+  contactModal.classList.toggle('is-open');
   backdrop.classList.toggle('visible');
 }
 
 ctcBtn.addEventListener('click', () => {
   toggleContactModal();
   if (mediaQuery.matches) {
-    document.body.setAttribute('class', 'noscroll');
+    document.body.setAttribute('class', 'u-noscroll');
   }
 });
 
 [closeBtn,backdrop].forEach(cls => cls.addEventListener('click', () => {
-  document.body.className = document.body.className.replace('noscroll', '');
+  document.body.className = document.body.className.replace('u-noscroll', '');
   const inputs = contactModal.querySelectorAll('input');
   inputs.forEach((input) => (input.value = ''));
   toggleContactModal();

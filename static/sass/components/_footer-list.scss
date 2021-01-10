@@ -1,0 +1,10 @@
+.c-footer-list {
+  &__link {
+    display: block;
+    padding-top: 5px;
+
+    &:hover {
+      color: #ffd5e5;
+    }
+  }
+}

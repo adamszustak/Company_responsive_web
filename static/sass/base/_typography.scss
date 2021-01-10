@@ -1,0 +1,49 @@
+body {
+  font-family: $main-font;
+  font-weight: $light-font;
+}
+
+.c-heading-big {
+  font-size: 3rem;
+  font-weight: $bold-font;
+
+  @include sm {
+    font-size: 2.5rem;
+  }
+
+  &--shadow {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 100px 4px rgb(0, 0, 0);
+  }
+}
+
+.c-heading-medium {
+  font-size: 2rem;
+  font-weight: $bold-font;
+
+  @include sm {
+    font-size: 1.7rem;
+  }
+}
+
+.c-heading-small {
+  font-size: 1.7rem;
+
+  @include sm {
+    font-size: 1.4rem;
+  }
+
+  &--shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 10px;
+    border-radius: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+.paragraph {
+  line-height: 1.4;
+}
