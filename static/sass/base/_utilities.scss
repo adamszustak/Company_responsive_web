@@ -19,3 +19,7 @@
 .u-bold {
   font-weight: $bold-font;
 }
+
+.u-nohover {
+  pointer-events: none;
+}

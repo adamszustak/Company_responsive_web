@@ -109,6 +109,10 @@ body {
   font-weight: 600;
 }
 
+.u-nohover {
+  pointer-events: none;
+}
+
 .c-hamburger {
   display: none;
 }
@@ -1227,5 +1231,14 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.posts {
+  margin-top: calc(2rem + 75px);
+}
+
+.detail {
+  width: 80%;
+  margin: calc(75px - 1px) auto 0;
 }
 /*# sourceMappingURL=main.css.map */
